@@ -10,6 +10,9 @@ github_username:  theReboot
 
 # Build settings
 markdown: kramdown
-gems: [bourbon, neat]
+gems:
+  - bourbon 
+  - neat
+  - octopress-autoprefixer
 sass:
   style: compressed
