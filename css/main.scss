@@ -45,8 +45,25 @@ h3 {
 
 // Section specifics
 
+.introduction {
+
+  h1 {
+    color: #fff;
+  }
+
+  h2 {
+    color: $grey;
+  }
+}
+
 .textwrap {
-  @include span-columns(8);
+  @include span-columns(5 of 12);
+  @include shift(6 of 12);
+
+  @media screen and (max-width: 768px){
+    @include span-columns(12 of 12);
+    @include shift(0);
+  }
 }
 
 .photoBG {
