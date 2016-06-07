@@ -1,0 +1,15 @@
+# Site settings
+title: People-Powered Media Innovation in West Africa
+email: hello@reboot.org
+description: > # this means to ignore newlines until "baseurl:"
+  Accelerating development & good governance in the new media landscape
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "westafricamedia.reboot.org" # the base hostname & protocol for your site
+twitter_username: theReboot
+github_username:  theReboot
+
+# Build settings
+markdown: kramdown
+gems: [bourbon, neat]
+sass:
+  style: compressed
