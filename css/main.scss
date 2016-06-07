@@ -119,7 +119,7 @@ button {
   @include span-columns(6 of 12);
   @include shift(5 of 12);
 
-  margin-top: 45vh;
+  margin-top: 50vh;
   transform: translateY(-50%);
 
   @include media($tablet) {
