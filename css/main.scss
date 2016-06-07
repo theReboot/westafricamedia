@@ -6,23 +6,46 @@
 @import 'neat/neat';
 @import 'variables';
 
+* {
+  transition: .2s all ease;
+}
+
 body {
   font-size: 16px;
+  font-family: $helvetica;
 }
 
 // this allows height percentages to work on child elements
 html,
 body,
-.wrapper {
+.introduction {
   height: 100%;
+  margin: 0;
 }
 
 .wrapper {
   @include outer-container;
+  padding: 0 1rem;
+}
+
+section:not(.introduction) {
+  @include span-columns(8 of 12);
+  @include shift(2 of 12);
+  padding: 2rem 0;
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+  }
 }
 
 footer {
-  @include span-columns(12);
+  background: $offwhite;
+  padding: 2rem 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 // General Typography
@@ -43,9 +66,46 @@ h3 {
   font-weight: 500;
 }
 
+p {
+  line-height: 1.4;
+}
+
+button {
+  background: none;
+  border: 2px solid $grey;
+  padding: 0;
+  margin: 1rem 0;
+  font-family: $domine;
+  text-align: center;
+  font-size: 1rem;
+  transition: .15s all ease;
+
+  &:hover {
+    background: rgba(0,0,0,.2);
+  }
+
+  a {
+    display: block;
+    padding: 1rem 2rem;
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:link {
+      color: $grey;
+      text-decoration: none;
+    }
+  }
+}
+
 // Section specifics
 
 .introduction {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  border: 1.3rem solid #fff;
 
   h1 {
     color: #fff;
@@ -57,10 +117,18 @@ h3 {
 }
 
 .textwrap {
-  @include span-columns(5 of 12);
-  @include shift(6 of 12);
+  @include span-columns(6 of 12);
+  @include shift(5 of 12);
 
-  @media screen and (max-width: 768px){
+  margin-top: 45vh;
+  transform: translateY(-50%);
+
+  @include media($tablet) {
+    @include span-columns(6 of 8);
+    @include shift(0);
+  }
+
+  @include media($mobile) {
     @include span-columns(12 of 12);
     @include shift(0);
   }
@@ -69,10 +137,18 @@ h3 {
 .photoBG {
   position: absolute;
   z-index: -1;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  height: 100vh;
   background: $orange;
+
+  > img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+
+    @include media($tablet) {
+      width: 75%;
+    }
+  }
 }

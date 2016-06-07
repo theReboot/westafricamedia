@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <section class="introduction">
+
+      <div class="photoBG">
+        <img src="{{ site.baseurl }}/img/photo.png" />
+      </div>
+
+      <div class="wrapper">
+
+        <div class="textwrap">
+
+          <h1>People-Powered Media Innovation in West Africa</h1>
+          <h2>Accelerating development &amp; good governance in the new media landscape</h2>
+          <button><a href="#">Download the PDF</a></button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="wrapper">
+
+      <section>
+        {{ content }}
+      </section>
+
+    </div>
+
+      {% include footer.html %}
+
+
+
+  </body>
+
+</html>

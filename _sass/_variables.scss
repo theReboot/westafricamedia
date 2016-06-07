@@ -2,8 +2,15 @@
 
 $orange: #F2C23C;
 $grey: #4F4F59;
-
+$offwhite: #EFEDE4;
 
 // type
 
 $domine: 'Domine', serif;
+$helvetica: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+// media-queries
+
+$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(max-width 768px 8);
+$computer: new-breakpoint(min-width 768px 12);
