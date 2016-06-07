@@ -67,12 +67,28 @@ h1 {
   font-weight: 700;
   font-size: 3rem;
   margin: 0 0 1rem;
+
+  @include media($tablet) {
+    font-size: 2.3rem;
+  }
+
+  @include media($mobile) {
+    font-size: 2rem;
+  }
 }
 
 h2,
 h3 {
   font-weight: 500;
   margin: 0 0 1rem;
+}
+
+h2 {
+  line-height: 1.3;
+
+  @include media($mobile) {
+    font-size: 1.4rem;
+  }
 }
 
 h4 {
@@ -92,7 +108,7 @@ p {
 }
 
 button {
-  background: none;
+  background: rgba(255,255,255,.8);
   border: 2px solid $grey;
   padding: 0;
   margin: 2rem 0 1rem;
@@ -102,8 +118,12 @@ button {
   font-size: 1rem;
   transition: .15s all ease;
 
+  @include media($mobile) {
+    width: 100%;
+  }
+
   &:hover {
-    background: rgba(0,0,0,.2);
+    background: rgba(255,255,255,1);
   }
 
   a {
@@ -129,6 +149,10 @@ button {
   height: 100vh;
   border: 1.3rem solid #fff;
 
+  @include media($mobile) {
+    border: 0;
+  }
+
   h1 {
     color: #fff;
   }
@@ -147,7 +171,7 @@ button {
 
   @include media($tablet) {
     @include span-columns(6 of 8);
-    @include shift(0);
+    @include shift(1);
   }
 
   @include media($mobile) {
@@ -176,6 +200,12 @@ button {
 
     @include media($tablet) {
       width: 75%;
+      opacity: .6;
+    }
+
+    @include media($mobile) {
+      width: 80%;
+      opacity: .6;
     }
   }
 }
