@@ -14,3 +14,4 @@ $helvetica: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue",
 $mobile: new-breakpoint(max-width 480px 4);
 $tablet: new-breakpoint(max-width 768px 8);
 $computer: new-breakpoint(min-width 768px 12);
+$shortwide: new-breakpoint(min-width 768px max-height 690px 12);
