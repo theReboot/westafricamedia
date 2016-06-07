@@ -10,3 +10,6 @@ github_username:  theReboot
 
 # Build settings
 markdown: kramdown
+gems: [bourbon, neat]
+sass:
+  style: compressed
