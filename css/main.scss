@@ -6,9 +6,14 @@
 @import 'neat/neat';
 @import 'variables';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-size: 16px;
   font-family: $helvetica;
+  color: $grey;
 }
 
 // this allows height percentages to work on child elements
@@ -25,9 +30,9 @@ body,
 }
 
 section:not(.introduction) {
-  @include span-columns(8 of 12);
-  @include shift(2 of 12);
-  padding: 2rem 0;
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+  padding: 2rem 0 3rem;
 
   @include media($mobile) {
     @include span-columns(4);
@@ -37,7 +42,12 @@ section:not(.introduction) {
 
 footer {
   background: $offwhite;
-  padding: 2rem 0;
+  padding: 4rem 0;
+
+  p {
+    font-size: .8rem;
+    margin: 0 0 .5rem;
+  }
 }
 
 img {
@@ -48,7 +58,8 @@ img {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: $domine;
 }
 
@@ -64,8 +75,20 @@ h3 {
   margin: 0 0 1rem;
 }
 
+h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+
+h6 {
+  font-size: .8rem;
+  margin: 0 0 .2rem;
+}
+
 p {
   line-height: 1.4;
+  margin: 0 0 1rem;
 }
 
 button {
@@ -154,5 +177,50 @@ button {
     @include media($tablet) {
       width: 75%;
     }
+  }
+}
+
+.twocol {
+  column-count: 2;
+
+  @include media($mobile) {
+    column-count: 1;
+  }
+}
+
+footer .title {
+  @include span-columns(7 of 12);
+  @include shift(1);
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+    margin-bottom: 2rem;
+  }
+}
+
+.copyright {
+  @include span-columns(4 of 12);
+  @include shift(1);
+}
+
+.credits {
+  @include span-columns(3 of 12);
+}
+
+.contact {
+  @include span-columns(3 of 12);
+}
+
+.copyright,
+.credits,
+.contact {
+  border-top: 1px solid $grey;
+  padding-top: 1rem;
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+    margin-bottom: 2rem;
   }
 }
