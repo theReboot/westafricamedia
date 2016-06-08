@@ -71,6 +71,10 @@ nav {
   right: 0;
   z-index: 2;
 
+  @include media($mobile) {
+    margin-top: 1.5rem;
+  }
+
   a {
     padding: .7rem 1rem;
     font-family: $domine;
@@ -394,6 +398,19 @@ p {
       width: 80%;
       opacity: .6;
     }
+  }
+}
+
+// doubling up for specificity
+.title.title {
+
+  h1 {
+    color: #fff;
+    opacity: 1;
+  }
+
+  h2 {
+    color: $grey;
   }
 }
 
