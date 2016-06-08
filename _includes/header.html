@@ -1,8 +1,13 @@
 <div class="wrapper">
-  
+
   <header class="site-header">
 
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <nav>
+
+        <a {% if page.nav == "home" %}class="active"{% else %}{% endif %} href="{{ site.baseurl }}/">Home</a>
+        <a {% if page.nav == "summary" %}class="active"{% else %}{% endif %} href="{{ site.baseurl }}/summary/">Summary</a>
+
+      </nav>
 
   </header>
 
