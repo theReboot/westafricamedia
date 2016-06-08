@@ -361,7 +361,7 @@ p {
   transform: translateY(-50%);
 
   @include media($shortwide) {
-    margin-top: 3rem;
+    margin-top: 7rem;
     transform: none;
   }
 
