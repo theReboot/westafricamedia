@@ -301,8 +301,8 @@ p {
   background: rgba(255,255,255,.8);
   border: 2px solid $grey;
   padding: 1rem 2rem;
-  margin: 2rem 0 1rem;
-  float: left;
+  margin: 2rem auto 1rem;
+  max-width: 20rem;
   display: block;
   font-family: $domine;
   text-align: center;
@@ -311,6 +311,11 @@ p {
   cursor: pointer;
   color: $grey;
   text-decoration: none;
+
+  .introduction & {
+    margin-left: 0;
+    float: left;
+  }
 
   @include media($mobile) {
     width: 100%;
