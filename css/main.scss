@@ -64,6 +64,70 @@ img {
   max-width: 100%;
 }
 
+.bleed {
+
+  &.green {
+    background: $green;
+  }
+
+  &.orange {
+    background: $orange;
+  }
+
+  &.teal {
+    background: $teal;
+  }
+
+  &.offwhite {
+    background: $offwhite;
+  }
+
+}
+
+.threecols {
+  @include span-columns(12);
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+
+  .column {
+    @include span-columns(4 of 12);
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+}
+
+.graphic {
+  max-height: 100vh;
+  max-width: 30em;
+  display: block;
+  margin-bottom: 2rem;
+
+  @include media($mobile) {
+    max-height: 80vh;
+  }
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linebreak {
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid $grey;
+  clear: both;
+  margin: 2rem 0 2rem;
+}
+
+.clearfix {
+  clear: both !important;
+}
+
 // General Typography
 
 h1,
@@ -99,6 +163,19 @@ h2 {
   @include media($mobile) {
     font-size: 1.4rem;
   }
+
+  // if the h2 is within a colored (but not offwhite) section it should be white
+  .bleed:not(.offwhite) & {
+    color: #fff;
+  }
+
+  // this is a heading that includes a pre-heading
+  &.twoPart {
+    &::first-line {
+      font-family: $helvetica;
+      font-size: 1.2rem;
+    }
+  }
 }
 
 h4 {
@@ -115,6 +192,11 @@ h6 {
 p {
   line-height: 1.4;
   margin: 0 0 1rem;
+}
+
+p.preface {
+  font-size: 1.2rem;
+  line-height: 2;
 }
 
 .button {
@@ -264,8 +346,4 @@ footer .title {
     @include shift(0);
     margin-bottom: 2rem;
   }
-}
-
-.clearfix {
-  clear: both !important;
 }
