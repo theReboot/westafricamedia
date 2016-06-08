@@ -40,6 +40,16 @@ section:not(.introduction) {
   }
 }
 
+header {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+  }
+}
+
 footer {
   background: $offwhite;
   padding: 4rem 0;
