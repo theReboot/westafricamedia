@@ -361,7 +361,7 @@ p {
   transform: translateY(-50%);
 
   @include media($shortwide) {
-    margin-top: 3rem;
+    margin-top: 7rem;
     transform: none;
   }
 
@@ -421,6 +421,7 @@ p {
 
 .twocol {
   column-count: 2;
+  column-gap: 1.6rem;
 
   @include media($mobile) {
     column-count: 1;
