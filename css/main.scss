@@ -57,7 +57,7 @@ header {
 
 footer {
   background: $offwhite;
-  padding: 4rem 0;
+  padding: 2.5rem 0 4rem;
 
   p {
     font-size: .8rem;
@@ -401,6 +401,20 @@ p {
 .logo {
   @include span-columns(1 of 2);
   margin-top: 1rem;
+
+  footer & {
+    @include span-columns(10);
+    @include shift(1);
+    width: 12rem;
+    float: none;
+    margin-bottom: 1rem;
+
+    @include media($mobile) {
+      @include span-columns(4);
+      @include shift(0);
+      width: 10rem;
+    }
+  }
 }
 
 .photoBG {
