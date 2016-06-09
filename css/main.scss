@@ -143,6 +143,14 @@ span {
 
 }
 
+.border {
+  border: $thickBorder;
+
+  @include media($mobile) {
+    border: 0;
+  }
+}
+
 .split {
   @include span-columns(12);
 
@@ -334,7 +342,7 @@ p {
   width: 100%;
   height: 100%;
   height: 100vh;
-  border: 1.3rem solid #fff;
+  border: $thickBorder;
 
   @include media($shortwide) {
     min-height: 690px;
