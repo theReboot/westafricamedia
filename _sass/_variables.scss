@@ -12,6 +12,11 @@ $hoverColor: rgba(204,204,204,.4);
 $domine: 'Domine', serif;
 $helvetica: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
+
+// misc
+
+$thickBorder: 1.3rem solid #fff;
+
 // media-queries
 
 $mobile: new-breakpoint(max-width 480px 4);
