@@ -260,8 +260,11 @@ h2 {
   // this is a heading that includes a pre-heading
   &.twoPart {
     &::first-line {
-      font-family: $helvetica;
       font-size: 1.2rem;
+
+      .bleed.green & {
+        color: $greenShade;
+      }
     }
   }
 }
@@ -401,6 +404,12 @@ p {
 .logo {
   @include span-columns(1 of 2);
   margin-top: 1rem;
+
+  .introduction & {
+    img {
+      width: 13rem;
+    }
+  }
 
   footer & {
     @include span-columns(10);
