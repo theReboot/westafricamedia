@@ -337,18 +337,34 @@ p {
   }
 }
 
-.buttonInline {
-  @include span-columns(4 of 12);
-  @include shift(.5);
+.buttonWrapper {
+  margin-top: 2rem;
 
-  &:first-child {
-    @include shift(2);
+  .button {
+    width: 17rem;
+
   }
 
-  @include media($tablet) {
-    @include span-columns(8 of 12);
-    @include shift(2);
+  .buttonRight {
+    float: right;
+    margin-right: calc(47% - 17rem);
+
+    @include media($tablet) {
+      float: none;
+      margin: 1rem auto;
+    }
   }
+
+  .buttonLeft {
+    float: left;
+    margin-left: calc(47% - 17rem);
+
+    @include media($tablet) {
+      float: none;
+      margin: 1rem auto;
+    }
+  }
+
 }
 
 // Section specifics
