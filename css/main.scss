@@ -73,6 +73,11 @@ nav {
 
   @include media($mobile) {
     margin-top: 1.5rem;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: auto;
   }
 
   a {
@@ -80,6 +85,10 @@ nav {
     font-family: $domine;
     margin-left: 1rem;
     transition: .15s all ease;
+
+    @include media($mobile) {
+      padding: .5rem;
+    }
 
     &:link,
     &:active,
